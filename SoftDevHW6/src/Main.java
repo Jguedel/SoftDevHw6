@@ -100,7 +100,7 @@ public class Main extends Composite {
 				try {
 					inputs.file(selectedFile);
 					ans.setText("The number of lines without comments are: " + Integer.toString(inputs.getLoc()) + "\n"
-							+ inputs.getLoops());
+							+ inputs.getLoops() + inputs.getMethod());
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

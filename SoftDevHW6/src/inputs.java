@@ -22,11 +22,14 @@ public class inputs {
 	
 	/** The loops. */
 	private static String[][] loops;
+	
+	/** The method. */
+	private static String method;
 
 	/**
 	 * File.
 	 *
-	 * @param inp the inp
+	 * @param inp the selected file
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void file(File inp) throws IOException {
@@ -42,13 +45,14 @@ public class inputs {
 		}
 		loc = counts.countingFile(files);
 		loops = counts.countLoops(files);
+		method = counts.countMethods(files);
 
 	}
 	
 	/**
 	 * Gets the loops.
 	 *
-	 * @return the loops
+	 * @return the number of times for, if, while, and switch statements appear
 	 */
 	public static String getLoops() {
 		String ans= "";
@@ -64,9 +68,18 @@ public class inputs {
 	}
 
 	/**
+	 * Gets the method.
+	 *
+	 * @return the method
+	 */
+	public static String getMethod() {
+		return method;
+	}
+
+	/**
 	 * Gets the loc.
 	 *
-	 * @return the loc
+	 * @return the count for the lines of code
 	 */
 	public static int getLoc() {
 		return loc;
