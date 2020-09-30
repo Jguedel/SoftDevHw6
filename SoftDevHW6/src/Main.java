@@ -1,3 +1,8 @@
+/*
+ * @author jguedel
+ * @version 1.0
+ * 
+ */
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.layout.GridLayout;
@@ -17,11 +22,26 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Main.
+ */
 public class Main extends Composite {
+	
+	/** The File name. */
 	private Text FileName;
+	
+	/** The ans. */
 	private Text ans;
+	
+	/** The selected file. */
 	private File selectedFile;
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		Display display = new Display();
 		Shell shell = new Shell(display);
@@ -39,9 +59,9 @@ public class Main extends Composite {
 
 	/**
 	 * Create the composite.
-	 * 
-	 * @param parent
-	 * @param style
+	 *
+	 * @param parent the parent
+	 * @param style  the style
 	 */
 	public Main(Composite parent, int style) {
 		super(parent, style);
@@ -96,6 +116,9 @@ public class Main extends Composite {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.swt.widgets.Composite#checkSubclass()
+	 */
 	@Override
 	protected void checkSubclass() {
 		// Disable the check that prevents subclassing of SWT components
