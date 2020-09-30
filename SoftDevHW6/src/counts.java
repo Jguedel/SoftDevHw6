@@ -16,7 +16,7 @@ public class counts {
 		int lines = 0;
 		for (int i = 0; i <= files.length - 1; i++) {
 			lines++;
-			if (files[i].contains("//") || files[i].contains("/*")) {
+			if (files[i].startsWith("//") || files[i].startsWith("/*")) {
 				lines--;
 				if (files[i].contains("/*")) {
 					while (!files[i].contains("*/")) {
@@ -119,10 +119,8 @@ public class counts {
 		// COUNT LINES
 		for (int i = start; i <= end; i++) {
 			ans++;
-			System.out.println(files[i] + " " + ans);
 			if (files[i].contains("//") || files[i].contains("/*")) {
 				ans--;
-				System.out.println(files[i] + " " + ans);
 				if (files[i].contains("/*")) {
 					while (!files[i].contains("*/")) {
 						i++;
